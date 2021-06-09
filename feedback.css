@@ -31,7 +31,7 @@
     font-weight: 550;
     color: black;
     font-size: 24px;
-    /* padding: 15px 0px; */
+    padding: 12px 0px;
 
 }
 
@@ -48,15 +48,15 @@
 
 .inner-top{
     background-color: #f2f2f2;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     text-align: center;
-    /* margin-top:-30px; */
+    margin-top:-25px;
 }
 
 .form-content{
     margin:0px 35px;
-    margin-top:-15px;
+    margin-top:-20px;
     /* padding:0px 10px; */
 }
 
@@ -234,8 +234,15 @@ input[type='radio']:checked:after {
 }
 
 #userEmail{ 
-    margin-right: 20px;
+    padding-right: 5px;
     margin-bottom: 0;
-    color: #fe7c00;
+    color: #5f5d5d;
+    padding-bottom: 4px !important;
+    /* background-color:  #f2f2f2; */
+    /* color: #fe7c00; */
     /* margin-bottom: -1px; */
+}
+
+#RadioQues-validation{
+    margin-bottom:10px;
 }

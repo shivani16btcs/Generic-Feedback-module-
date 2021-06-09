@@ -12,21 +12,24 @@ var forObj={
 var rateText=['very Satisfied', 'Satisfied', 'Neutral','unsatisfied','very Unsatisfied'];
 var isFeedbackFormValid=false;
 var formSubmitted = false;
-var currentUrl='Dispatch'
+var appName;
+var userEmail;
 
 window.onload = function() {
-    // currentUrl = window.location.href;
+    let currentUrl = new URLSearchParams(window.location.search);
+    appName = currentUrl.get('app')||'Dispatch';
+    userEmail = currentUrl.get('email')||'ayush.omer@daffodilsw.com';
     setInitialValue();
  
 };
 
 function setInitialValue(){
-    document.getElementById("appName").innerHTML = "Chalo "+currentUrl+" Feedback";
-    document.getElementById("userEmail").innerHTML = "ayush.omer@daffodilsw.com";
     closeToaster('toastError');
     closeToaster('toastSuccess');
     document.getElementById('Recommendation-validation').style.visibility = "hidden";
     document.getElementById('RadioQues-validation').style.visibility = "hidden";
+    document.getElementById("appName").innerHTML = "Chalo "+appName+" Feedback";
+    document.getElementById("userEmail").innerHTML = userEmail;
     // document.getElementById("selectedRecommendation").value = '';
 
     formSubmitted = false;
