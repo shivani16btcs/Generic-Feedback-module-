@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="./feedback.css" type="text/css">
+<script type="text/javascript" src="./feedback.js"></script>
+
+
+<div class="container">
+    <div class="outer-top-container">
+        <div class="logo">
+            <img src="./images/Profile_Chalo.jpeg" height="45px"  width="180px" alt="" />
+            <p class="top-text">Making Bus Travel Safer For Everyone</p>
+        </div>
+        <img src="./images/banner.jpeg" height="130px"  width="60%;" alt="" />
+    </div>
+    
+    <div class="form-container">
+        <!-- <div class="inner-top">
+            <p class="feedback-top-text">Chalo  Feedback</p>
+        </div> -->
+        <div align="right"; class="content-head" >
+            <div id="userDetail">
+                <p id="userEmail"></p>
+            </div>
+            
+            <!-- <p  id="userEmail"></p> -->
+            <div class="inner-top">
+                <p class="feedback-top-text" id="appName"></p>
+            </div>
+        </div>
+       
+        <form>
+            <div class="form-content">
+                <table class="rating" >
+                    <tr class="rating-head"> 
+                        <th></th>
+                        <th>very Satisfied</th>
+                        <th>Satisfied</th>
+                        <th>Neutral</th>
+                        <th>unsatisfied</th>
+                        <th>very Unsatisfied</th>
+                    </tr>
+                    <tr class="rating-body">
+                        <td class="ques">How Satisfied are you with our product</td>
+                        <td class="radio-btn"><input onclick="setRadio(0,ques1.value)" id="ques1" name="ques1" type="radio" value="1"></td>
+                        <td class="radio-btn"><input onclick="setRadio(0,ques1.value)" id="ques1" name="ques1" type="radio" value="2"></td>
+                        <td class="radio-btn"><input onclick="setRadio(0,ques1.value)" id="ques1" name="ques1" type="radio" value="3"></td>
+                        <td class="radio-btn"><input onclick="setRadio(0,ques1.value)" id="ques1" name="ques1" type="radio" value="4"></td>
+                        <td class="radio-btn"><input onclick="setRadio(0,ques1.value)" id="ques1" name="ques1" type="radio" value="5"></td>
+                    </tr>
+                    <tr class="rating-body">
+                        <td class="ques">How Satisfied are you with our service</td>
+                        <td class="radio-btn"><input onclick="setRadio(1,ques2.value)" id="ques2" name="ques2" type="radio" value="1" ></td>
+                        <td class="radio-btn"><input onclick="setRadio(1,ques2.value)" id="ques2" name="ques2" type="radio" value="2"></td>
+                        <td class="radio-btn"><input onclick="setRadio(1,ques2.value)" id="ques2" name="ques2" type="radio" value="3"></td>
+                        <td class="radio-btn"><input onclick="setRadio(1,ques2.value)" id="ques2" name="ques2" type="radio" value="4" ></td>
+                        <td class="radio-btn"><input onclick="setRadio(1,ques2.value)" id="ques2" name="ques2" type="radio" value="5"></td>
+                    </tr>
+                    <tr class="rating-body">
+                        <td class="ques">How Satisfied are you with our team</td>
+                        <td class="radio-btn"><input onclick="setRadio(2,ques3.value)" id="ques3" name="ques3" type="radio" value="1"></td>
+                        <td class="radio-btn"><input onclick="setRadio(2,ques3.value)" id="ques3" name="ques3" type="radio" value="2"></td>
+                        <td class="radio-btn"><input onclick="setRadio(2,ques3.value)" id="ques3" name="ques3" type="radio" value="3"></td>
+                        <td class="radio-btn"><input onclick="setRadio(2,ques3.value)" id="ques3" name="ques3" type="radio" value="4"></td>
+                        <td class="radio-btn"><input onclick="setRadio(2,ques3.value)" id="ques3" name="ques3" type="radio" value="5"></td>
+                    </tr>
+                </table>
+                <div  id="RadioQues-validation" class="validation"> <i class="fa fa-Warning"></i> Please choose atleast one from all above question  </div>
+                <br>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label for="comments">
+                            On scale of 1 to 10, How Likely are you to recommend chalo to your friends and family? - 1 being the least, 10 being the highest
+                        </label>
+                            <select id="selectedRecommendation" >
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                                <option>6</option>
+                                <option>7</option>
+                                <option>8</option>
+                                <option>9</option>
+                                <option>10</option>
+                            </select>
+                            <div  id="Recommendation-validation" class="validation"> <i class="fa fa-Warning"></i> Please Choose atleast one</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 form-group">
+                        <label for="comments">
+                            Tell us How can we improve:
+                            <textarea class="text-area" id="comment" class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comment" maxlength="6000" rows="7"></textarea>
+                        </label>
+                            <!-- <input type="text"> -->
+                    </div>
+                </div>
+                <div class="submit" >
+                    <input class="submit-feedback" type="button" onclick="submitFeedback()" value="Submit">  
+                </div>
+                <br>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="isa_success"  id="toastSuccess" >
+    <i class="fa fa-check"></i>
+    Success, submitted Successfully
+    &nbsp; &nbsp; &nbsp;
+
+    <button onclick="closeToaster('toastSuccess')"
+    class="toaster-close_bar">
+    ×
+    </button>
+</div>
+<div class="isa_error" id="toastError" >
+    <i class="fa fa-times-circle"></i>
+    Error,  Something went wrong
+    &nbsp; &nbsp; &nbsp;
+    <button onclick="closeToaster('toastError')"
+    class="toaster-close_bar">
+    ×
+    </button>
+</div>
+

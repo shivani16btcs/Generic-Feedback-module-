@@ -1,0 +1,70 @@
+
+
+/* =================== Popup CSS ===================== */
+
+.modal{
+    z-index: inherit 1000;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0.8;
+    /* position: fixed; */
+    bottom: 23px;
+    right: 28px;
+    width: 280px;
+    font-family: arial;
+}
+
+
+.modal-content {
+    background-color: #fff;
+    padding: 1rem 1rem;
+    box-shadow: 0 8px 20px 6px rgba(0, 116, 163, 0.16);
+    border-radius: 0.3rem;
+    outline: 0;
+    overflow: hidden;
+  }
+.logo1{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-header{
+    font-size:18px;
+   display: flex;
+   justify-content: space-between;
+   color:#fe7c00;
+   font-weight: 600;
+    font-size:20px;
+    font-style: arial;
+}
+
+.feedback-content{
+    font-weight: 600;
+}
+
+ .close_bar{
+    background-color:transparent;
+    border:none;
+    color:#fe7c00;
+    font-weight: 600;
+    font-size:20px;
+    cursor: pointer;
+}
+.close_bar:hover{
+   font-size: 25px;
+}
+.feedback-button{
+    border: 1;
+    padding:1px;
+    outline: none;
+    cursor: pointer;
+    border-radius:5px;
+    background-color:#fe7c00;
+    color:#fff;
+}
+
+.feedback-button:hover {
+    padding:2px;
+    border: 1;
+    border-color:#fe7c00;;
+}
