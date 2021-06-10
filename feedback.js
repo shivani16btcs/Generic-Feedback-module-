@@ -127,7 +127,7 @@ function selectRecommendation(value){
     if(!prevSelectedID){
         prevSelectedID=selectedId;
     }
-    else {
+    else if(prevSelectedID != selectedId){
         let obj1 = document.getElementById(prevSelectedID);
         obj1.style.backgroundColor = "transparent";
         obj1.style.color="black";

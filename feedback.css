@@ -1,7 +1,7 @@
 @import url('//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 
 .container{
-    font-family: arial;
+    /* font-family: arial; */
     z-index: -1;
 }
 
@@ -10,6 +10,7 @@
     justify-content: center;
     position: relative;
     text-align: center;
+    font-family: arial;
 }
 .logo {
     position: absolute;
@@ -24,15 +25,17 @@
 
 .top-text{
     margin-top:-19px;
-    font-weight: 550;
 }
 
 .feedback-top-text{
-    font-weight: 550;
     color: black;
     font-size: 24px;
     padding: 12px 0px;
+    font-weight: 550;
+}
 
+.content-head{
+    font-family: arial;
 }
 
 .form-container{
@@ -42,7 +45,6 @@
     width: 60%;
     border: 2px solid  #f2f2f2; /* Gray border */
     border-radius: 4px; /* Rounded borders */
-    font-weight: 550;
 }
 
 
@@ -62,7 +64,7 @@
 
 input[type=text], select, textarea ,#selectid{
     width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
+    padding: 9px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
     box-sizing: border-box; /* Make sure that padding and width stays in place */
@@ -98,7 +100,7 @@ width: 100%;
 th {
 height: 70px;
 width:100px;
-font-weight: 550;
+font-weight: 500;
 }
 
 td{
@@ -118,7 +120,7 @@ td{
     width:150px !important;
     height:25px;
     background-color:transparent;
-    font-weight: 550;
+    /* font-weight: 550; */
 
 }
 
@@ -215,7 +217,6 @@ input[type='radio']:checked:after {
         background-color:transparent;
         border:none;
         color:black;
-        font-weight: 400;
         font-size:20px;
         cursor: pointer;
     }
@@ -223,7 +224,6 @@ input[type='radio']:checked:after {
 
 .validation{
     font-size: 12px;
-    font-weight: 500;
     line-height: 1.4;
     color:red;
     padding-left: 30px;
@@ -293,8 +293,8 @@ input[type='radio']:checked:after {
     /* background-color: #0000000A ; */
 }
 #dropdownList li {
-    padding-top: 0.3rem;
-    padding-bottom:0.3rem;
+    padding-top: 0.2rem;
+    padding-bottom:0.2rem;
     padding-left: 2rem;
     padding-right: 45rem;
     background-color:transparent;
