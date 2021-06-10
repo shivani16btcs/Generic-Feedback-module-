@@ -60,7 +60,7 @@
     /* padding:0px 10px; */
 }
 
-input[type=text], select, textarea {
+input[type=text], select, textarea ,#selectid{
     width: 100%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
@@ -71,7 +71,8 @@ input[type=text], select, textarea {
     resize: vertical;
     color: #fe7c00;
     outline: none ! important;
-    border-color:1 px #fe7c00; 
+    border-color:1 px #fe7c00 ; 
+    text-align: left; 
   }
 
   textarea:focus-within { 
@@ -85,7 +86,7 @@ input:focus-within {
     border-color:1 px #fe7c00; 
 } 
 
-select:focus-within {
+#selectid:focus-within {
     outline: none ! important;
     border-color:#fe7c00 ; 
 } 
@@ -238,11 +239,67 @@ input[type='radio']:checked:after {
     margin-bottom: 0;
     color: #5f5d5d;
     padding-bottom: 4px !important;
-    /* background-color:  #f2f2f2; */
-    /* color: #fe7c00; */
-    /* margin-bottom: -1px; */
 }
 
 #RadioQues-validation{
     margin-bottom:10px;
+}
+
+
+
+/*  Custom Dropdown CSS */
+#selectid{
+    cursor: pointer;
+    background-color: transparent;
+}
+
+
+#dropdownList{
+    position: absolute;
+    font-size: 15px;
+    font-family: arial;
+}
+
+.arrow {
+    border: solid #fe7c00;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    float: right;
+    margin-top:-40px;
+    margin-right:20px;
+  }
+
+  .down {
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+  }
+
+
+
+  #dropdownList ul {
+    padding: 1;
+    /* min-width: 124px;*/
+    margin-top: -17px; 
+    list-style-type: none;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.08);
+    position: absolute;
+    /* right: -1px; */
+    z-index: 9;
+    overflow: hidden;
+    border: 1px;
+}
+#dropdownList li {
+    padding: 0.3rem 23rem;
+    display: flex;
+    justify-content: left;
+    background-color:transparent;
+    align-items: left;
+}
+
+#dropdownList li:hover {
+    cursor: pointer;
+    background-color: #f2f2f2 !important;
 }

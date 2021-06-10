@@ -14,6 +14,8 @@ var isFeedbackFormValid=false;
 var formSubmitted = false;
 var appName;
 var userEmail;
+var dropDownOpen;
+var prevSelectedID='';
 
 window.onload = function() {
     let currentUrl = new URLSearchParams(window.location.search);
@@ -28,12 +30,15 @@ function setInitialValue(){
     closeToaster('toastSuccess');
     document.getElementById('Recommendation-validation').style.visibility = "hidden";
     document.getElementById('RadioQues-validation').style.visibility = "hidden";
+    document.getElementById('dropdownList').style.visibility = "hidden";
+
     document.getElementById("appName").innerHTML = "Chalo "+appName+" Feedback";
     document.getElementById("userEmail").innerHTML = userEmail;
     // document.getElementById("selectedRecommendation").value = '';
 
     formSubmitted = false;
     isFeedbackFormValid=false;
+    dropDownOpen=false
 
 
 }
@@ -47,8 +52,7 @@ function setRadio(quesIndex,value){
 function submitFeedback(){
     formSubmitted=true;
     //recommendation
-    let e = document.getElementById("selectedRecommendation");
-    forObj.selectedRecommendation = e.options[e.selectedIndex].text;
+    forObj.selectedRecommendation =document.getElementById("selectid").value;
 
     //comment
     forObj.comment = document.getElementById("comment").value;
@@ -103,4 +107,32 @@ function checkValidation(){
     }else{
         isFeedbackFormValid = true;
     }
+}
+
+function rateDropdownOpen(){
+    dropDownOpen= !dropDownOpen
+    document.getElementById('dropdownList').style.visibility =  dropDownOpen?"visible":"hidden";
+}
+
+
+function selectRecommendation(value){
+    document.getElementById("selectid").value=value;
+    forObj.selectedRecommendation=value
+    var selectedId= "rate"+value;
+    if(document.getElementById(selectedId).value == value){
+        let obj = document.getElementById(selectedId);
+        obj.style.backgroundColor = "#f2f2f2";
+        obj.style.color="#fe7c00";
+    }
+    if(!prevSelectedID){
+        prevSelectedID=selectedId;
+    }
+    else {
+        let obj1 = document.getElementById(prevSelectedID);
+        obj1.style.backgroundColor = "transparent";
+        obj1.style.color="black";
+        prevSelectedID=selectedId;
+    }
+    rateDropdownOpen();
+    checkValidation();
 }

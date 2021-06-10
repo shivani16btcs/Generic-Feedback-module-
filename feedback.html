@@ -66,27 +66,33 @@
                 <!-- <br> -->
                 <div class="row">
                     <div class="col-sm-12 form-group">
-                        <label for="comments">
+                        <label >
                             On scale of 1 to 10, How Likely are you to recommend chalo to your friends and family? - 1 being the least, 10 being the highest
                         </label>
-                            <select id="selectedRecommendation" >
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                                <option>6</option>
-                                <option>7</option>
-                                <option>8</option>
-                                <option>9</option>
-                                <option>10</option>
-                            </select>
-                            <div  id="Recommendation-validation" class="validation"> <i class="fa fa-Warning"></i> Please Choose atleast one</div>
+                        <input id="selectid" type="button"  onclick="rateDropdownOpen()"> 
+                        <i class="arrow down"></i>
+                        <div id="dropdownList">
+                            <ul>
+                              <div id="dropdownbox">
+                                <li class="dropdown-content" id="rate1" value="1" onclick="selectRecommendation(1)">1</li>
+                                <li class="dropdown-content"  id="rate2" value="2" onclick="selectRecommendation(2)"> 2</li>
+                                <li class="dropdown-content" id="rate3"  value="3" onclick="selectRecommendation(3)"> 3 </li>
+                                <li class="dropdown-content" id="rate4" value="4"  onclick="selectRecommendation(4)"> 4 </li>
+                                <li class="dropdown-content"  id="rate5" value="5" onclick="selectRecommendation(5)"> 5 </li>
+                                <li class="dropdown-content"  id="rate6" value="6" onclick="selectRecommendation(6)"> 6 </li>
+                                <li class="dropdown-content"  id="rate7" value="7" onclick="selectRecommendation(7)"> 7 </li>
+                                <li class="dropdown-content"  id="rate8" value="8"  onclick="selectRecommendation(8)"> 8 </li>
+                                <li class="dropdown-content"  id="rate9" value="9" onclick="selectRecommendation(9)"> 9 </li>
+                                <li class="dropdown-content"  id="rate10" value="10" onclick="selectRecommendation(10)"> 10 </li>
+                              </div>
+                            </ul>
+                        </div>
+                        <div  id="Recommendation-validation" class="validation"> <i class="fa fa-Warning"></i> Please Choose atleast one</div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 form-group">
-                        <label for="comments">
+                        <label >
                             Tell us How can we improve:
                             <textarea class="text-area" id="comment" class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comment" maxlength="6000" rows="7"></textarea>
                         </label>
