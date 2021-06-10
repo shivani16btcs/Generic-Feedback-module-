@@ -290,16 +290,17 @@ input[type='radio']:checked:after {
     z-index: 9;
     overflow: hidden;
     border: 1px;
+    /* background-color: #0000000A ; */
 }
 #dropdownList li {
-    padding: 0.3rem 23rem;
-    display: flex;
-    justify-content: left;
+    padding-top: 0.3rem;
+    padding-bottom:0.3rem;
+    padding-left: 2rem;
+    padding-right: 45rem;
     background-color:transparent;
-    align-items: left;
 }
 
 #dropdownList li:hover {
     cursor: pointer;
-    background-color: #f2f2f2 !important;
+    background-color: #0000000A !important;
 }
