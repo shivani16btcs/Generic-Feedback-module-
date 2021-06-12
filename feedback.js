@@ -74,6 +74,7 @@ function promiseAjax(url){
         launch_toast('toastSuccess');
     }else{
         launch_toast('toastError');
+
     }
     };
     let data=forObj;
@@ -84,7 +85,7 @@ function launch_toast(id) {
     showToaster(id);
     setTimeout(function(){
        closeToaster(id);
-    }, 5000);
+    }, 3000);
 }
 
 function closeToaster(id){

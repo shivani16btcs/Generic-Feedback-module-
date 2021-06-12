@@ -2,7 +2,7 @@
 
 /* =================== Popup CSS ===================== */
 
-.modal{
+.feedback-modal{
     z-index: inherit 1000;
     position: absolute;
     cursor: pointer;
@@ -15,7 +15,7 @@
 }
 
 
-.modal-content {
+.feedback-modal-content {
     background-color: #fff;
     padding: 1rem 1rem;
     box-shadow: 0 8px 20px 6px rgba(0, 116, 163, 0.16);
@@ -23,12 +23,12 @@
     outline: 0;
     overflow: hidden;
   }
-.logo1{
+.feedback-logo1{
     display: flex;
     justify-content: center;
 }
 
-.modal-header{
+.feedback-modal-header{
     font-size:18px;
    display: flex;
    justify-content: space-between;
@@ -42,7 +42,7 @@
     font-weight: 600;
 }
 
- .close_bar{
+ .feedback-close_bar{
     background-color:transparent;
     border:none;
     color:#fe7c00;
@@ -50,7 +50,7 @@
     font-size:20px;
     cursor: pointer;
 }
-.close_bar:hover{
+.feedback-close_bar:hover{
    font-size: 25px;
 }
 .feedback-button{
