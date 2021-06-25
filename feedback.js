@@ -31,7 +31,6 @@ function setInitialValue(){
     document.getElementById('Recommendation-validation').style.visibility = "hidden";
     document.getElementById('RadioQues-validation').style.visibility = "hidden";
     document.getElementById('dropdownList').style.visibility = "hidden";
-
     document.getElementById("appName").innerHTML = "Chalo "+appName+" Feedback";
     document.getElementById("userEmail").innerHTML = userEmail;
     // document.getElementById("selectedRecommendation").value = '';
@@ -39,8 +38,31 @@ function setInitialValue(){
     formSubmitted = false;
     isFeedbackFormValid=false;
     dropDownOpen=false
+}
 
+function reInitialize(){
+    setInitialValue();
+    document.getElementById("selectid").value='';
+    forObj={
+    Question:[
+        {ques:'1', value:'',textValue:''},
+        {ques:'2', value:'',textValue:''},
+        {ques:'3', value:'',textValue:''},
+    ],
+    selectedRecommendation:'',
+    comment:''
+    }
+    document.getElementById("comment").value='';
+    uncheckRadio("ques1");
+    uncheckRadio("ques2");
+    uncheckRadio("ques3");
+}
 
+function uncheckRadio(name){
+    var ele = document.getElementsByName(name);
+    for(var i=0;i<ele.length;i++){
+       ele[i].checked = false;
+    }
 }
 
 function setRadio(quesIndex,value){
@@ -85,6 +107,7 @@ function launch_toast(id) {
     showToaster(id);
     setTimeout(function(){
        closeToaster(id);
+       reInitialize();
     }, 3000);
 }
 

@@ -285,7 +285,9 @@ input[type='radio']:checked:after {
     list-style-type: none;
     background: white;
     border-radius: 4px;
-    box-shadow: 0 1px 10px 0px rgba(0, 0, 0, 0.08);
+    /* box-shadow: 0 8px 20px 6px #FFD2D2; */
+
+    box-shadow: 0 1px 10px 0px #FFD2D2;;
     position: absolute;
     /* right: -1px; */
     z-index: 9;
@@ -300,6 +302,7 @@ input[type='radio']:checked:after {
     padding-right: 45rem;
     background-color:transparent;
     border-bottom: 0.001rem solid #F5F5F5;
+    /* border-bottom: 00.001rem #FFD2D2; */
 }
 
 #dropdownList li:hover {

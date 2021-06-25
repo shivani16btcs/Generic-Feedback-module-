@@ -74,10 +74,10 @@
                         <div id="dropdownList">
                             <ul>
                               <div id="dropdownbox">
-                                <li class="dropdown-content" id="rate1" value="1" onclick="selectRecommendation(1)">1</li>
+                                <li class="dropdown-content"  id="rate1" value="1" onclick="selectRecommendation(1)">1</li>
                                 <li class="dropdown-content"  id="rate2" value="2" onclick="selectRecommendation(2)"> 2</li>
-                                <li class="dropdown-content" id="rate3"  value="3" onclick="selectRecommendation(3)"> 3 </li>
-                                <li class="dropdown-content" id="rate4" value="4"  onclick="selectRecommendation(4)"> 4 </li>
+                                <li class="dropdown-content"  id="rate3" value="3" onclick="selectRecommendation(3)"> 3 </li>
+                                <li class="dropdown-content"  id="rate4" value="4"  onclick="selectRecommendation(4)"> 4 </li>
                                 <li class="dropdown-content"  id="rate5" value="5" onclick="selectRecommendation(5)"> 5 </li>
                                 <li class="dropdown-content"  id="rate6" value="6" onclick="selectRecommendation(6)"> 6 </li>
                                 <li class="dropdown-content"  id="rate7" value="7" onclick="selectRecommendation(7)"> 7 </li>
@@ -94,7 +94,7 @@
                     <div class="col-sm-12 form-group">
                         <label >
                             Tell us How can we improve:
-                            <textarea class="text-area" id="comment" class="form-control" type="textarea" name="comments" id="comments" placeholder="Your Comment" maxlength="6000" rows="10"></textarea>
+                            <textarea class="text-area" id="comment" class="form-control" type="textarea" name="comments" id="comments" maxlength="6000" rows="10"></textarea>
                         </label>
                             <!-- <input type="text"> -->
                     </div>
@@ -108,18 +108,15 @@
     </div>
 </div>
 <div class="isa_success"  id="toastSuccess" >
-    <i class="fa fa-check"></i>
-    Success, submitted Successfully
+    <i class="fa fa-check"></i><strong>Success!  </strong> submitted Successfully
     &nbsp; &nbsp; &nbsp;
-
     <button onclick="closeToaster('toastSuccess')"
     class="toaster-close_bar">
     ×
     </button>
 </div>
 <div class="isa_error" id="toastError" >
-    <i class="fa fa-times-circle"></i>
-    Error,  Something went wrong
+    <i class="fa fa-times-circle"></i><strong>Error!  </strong>  Something went wrong
     &nbsp; &nbsp; &nbsp;
     <button onclick="closeToaster('toastError')"
     class="toaster-close_bar">
