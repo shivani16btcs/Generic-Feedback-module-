@@ -42,6 +42,7 @@ function setInitialValue(){
 
 function reInitialize(){
     setInitialValue();
+    initializeDropDown();
     document.getElementById("selectid").value='';
     forObj={
     Question:[
@@ -56,6 +57,16 @@ function reInitialize(){
     uncheckRadio("ques1");
     uncheckRadio("ques2");
     uncheckRadio("ques3");
+   
+}
+
+function initializeDropDown(){
+    var selectedId= "rate"+forObj.selectedRecommendation;
+    if(selectedId){
+        let obj1 = document.getElementById(selectedId);
+        obj1.style.backgroundColor = "transparent";
+        obj1.style.color="black";
+    }
 }
 
 function uncheckRadio(name){
@@ -135,6 +146,11 @@ function checkValidation(){
 
 function rateDropdownOpen(){
     dropDownOpen= !dropDownOpen
+    document.getElementById('dropdownList').style.visibility =  dropDownOpen?"visible":"hidden";
+}
+
+function closeDropdown(){
+    dropDownOpen=false;
     document.getElementById('dropdownList').style.visibility =  dropDownOpen?"visible":"hidden";
 }
 

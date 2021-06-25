@@ -152,6 +152,7 @@ input[type='radio']:after {
     display: inline-block;
     visibility: visible;
     border: 1px solid  #fe7c00;
+    cursor: pointer;
 }
 
 input[type='radio']:checked:after {
@@ -309,3 +310,12 @@ input[type='radio']:checked:after {
     cursor: pointer;
     background-color: #0000000A !important;
 }
+
+.menu-backdrop {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: transparent;
+    }
