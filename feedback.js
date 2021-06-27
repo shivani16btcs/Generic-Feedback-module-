@@ -61,8 +61,8 @@ function reInitialize(){
 }
 
 function initializeDropDown(){
-    var selectedId= "rate"+forObj.selectedRecommendation;
-    if(selectedId){
+    let selectedId= "rate"+forObj.selectedRecommendation;
+    if(forObj.selectedRecommendation){
         let obj1 = document.getElementById(selectedId);
         obj1.style.backgroundColor = "transparent";
         obj1.style.color="black";
