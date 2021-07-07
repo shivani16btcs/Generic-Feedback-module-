@@ -288,7 +288,7 @@ input[type='radio']:checked:after {
     border-radius: 4px;
     /* box-shadow: 0 8px 20px 6px #FFD2D2; */
 
-    box-shadow: 0 1px 10px 0px #FFD2D2;;
+    box-shadow: 0 1px 10px 0px  lightgrey;
     position: absolute;
     /* right: -1px; */
     z-index: 9;
